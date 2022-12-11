@@ -38,11 +38,13 @@ public class Shoppinglist {
         Itemnode cur = head;
         while (cur != null) {
             if (cur.name.equals(itemname)) {
-                int count = 1;
+                int count = in.nextInt();
                 if (count > cur.quntity) {
                     System.out.println("cant find this quntity");
                     return null;
                 }
+                int pri=count*cur.price;
+                cur.price-=pir;
                 cur.quntity -= count;
                 return count;
             }
